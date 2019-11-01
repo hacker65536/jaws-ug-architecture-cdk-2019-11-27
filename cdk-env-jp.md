@@ -1,17 +1,30 @@
-preparation
---
+# cdk workshop で利用する参考環境
 
-AWS
+macやwindowsなどのlaptopのlocal環境でも当然利用できるが、環境差異による問題を極小化するための参考環境
 
-- Sign up for AWS, if you don't have AWS Account.
-- Create an IAM User with Admin.
-- Create a VPC(Subnet, SecurityGroup, IGW...etc)
-- Launch an EC2 instance with `Amazon Linux 2`
+## 事前準備
+
+### AWSで準備しておくもの
+
+#### IAM 
+
+オペレーション用ユーザを作成する
+- rootアカウントを使用しない
+- Administrator(managed policy)グループを作成し紐付ける
+- access_key_idとsecret_access_keyを用意
+
+(同等のrole/instance-profileをEC2にアタッチするのでも可)
 
 
-The all following assume you operate with `Amazon Linux 2`
+#### EC2 instance
 
-GitHub
+いずれかのリージョンのデフォルトVPCに`Amazon Linux 2`の EC2インスタンスを起動する
+
+- instance-typeは
+
+### GitHub (option)
+
+githubアカウントを作成し、
 
 - Sign up for GitHub, if you don't have GitHub Account.
 - Create a personal access token
