@@ -6,14 +6,15 @@ macやwindowsなどのlaptopのlocal環境でも当然利用できるが、環�
 
 ### AWSで準備しておくもの
 
+
 #### IAM 
 
-オペレーション用ユーザを作成する
+オペレーション用ユーザを作成
 - rootアカウントを使用しない
 - Administrator(managed policy)グループを作成し紐付ける
 - access_key_idとsecret_access_keyを用意
 
-(同等のrole/instance-profileをEC2にアタッチするのでも可)
+(同等のrole/instance-profileをEC2にアタッチでも可)
 
 
 #### EC2 instance
