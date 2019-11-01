@@ -27,10 +27,20 @@ macやwindowsなどのlaptopのlocal環境でも当然利用できるが、環�
 
 ### GitHub (option)
 
-githubアカウントを作成し、
 
-- Sign up for GitHub, if you don't have GitHub Account.
-- Create a personal access token
+githubアカウントがなければ作成
+
+#### Repository
+
+cdkの保存用のリポジトリを作成する
+
+#### personal access token
+
+personal access tokenを用意
+
+メニューから Settings -> Developer settings -> Personal access tokens
+
+ `Generate new token`ボタンを押して、 token用途を入力、スコープを`repo`にチェックして作成
 
 sensitive data
 --
