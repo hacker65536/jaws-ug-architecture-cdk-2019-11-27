@@ -14,14 +14,16 @@ macやwindowsなどのlaptopのlocal環境でも当然利用できるが、環�
 - Administrator(managed policy)グループを作成し紐付ける
 - access_key_idとsecret_access_keyを用意
 
-(同等のrole/instance-profileをEC2にアタッチでも可)
+(同等のrole/instance-profileをEC2にアタッチでも可、ただし複数アカウントを扱う場合は混乱の可能性も)
 
 
 #### EC2 instance
 
-いずれかのリージョンのデフォルトVPCに`Amazon Linux 2`の EC2インスタンスを起動する
+いずれかのリージョンのデフォルトVPCに`Amazon Linux 2`の EC2インスタンス(free tier)を起動する
 
-- instance-typeは
+- KeyPiarの作成
+- SecurityGroupの作成、`curl checkip.amazonaws.com`のIPをinbound許可
+- 上記適応の`Amazon Linux 2`のEC2を起動
 
 ### GitHub (option)
 
