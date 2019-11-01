@@ -1,4 +1,4 @@
-# cdk workshop で利用する参考環境
+# cdk workshop を行う参考環境
 
 macやwindowsなどのlaptopのlocal環境でも当然利用できるが、環境差異による問題を極小化するための参考環境
 
