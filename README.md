@@ -18,6 +18,42 @@ WSL, Windows Terminal は Microsoft Store から install できる
 
 IDE はほぼ [vscode](https://code.visualstudio.com/) 一択なので download と install
 
+#### vscode の設定
+
+extensions
+
+local に install するもの
+
+- Remote Development(ssh,ssh:editting configruration files)
+- vscode-icons
+- Vim
+
+remote(実環境)に install するもの
+
+- Prettier - Code formatter
+- Git Blame
+- Git Graph
+- Git History
+- GitLens
+- TSLint
+
+<details><summary>vscode監視ファイルの一部を除外する設定</summary>
+https://code.visualstudio.com/docs/getstarted/settings
+
+`Ctrl+Shift+P`で Command Palette を開き`Open settings(JSON)`を選択
+
+`settings.json`に以下を追加
+
+```
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+```
+
+</details>
+
 ### 実環境作成のための準備
 
 - AWS アカウント
@@ -29,7 +65,11 @@ IDE はほぼ [vscode](https://code.visualstudio.com/) 一択なので download 
 
 - Amazon Linux 2
 
-### 設定
+minimal の場合はいずれかのリージョンの default VPC public ip 割り当てた状態で free tier の instance type で起動
+
+default の vpc の subnet はどれでも可(全てが igw への route を持つため)
+
+### 実環境の設定
 
 #### bash 環境を整える
 
@@ -171,4 +211,22 @@ cdk のバージョンを確認
 ```console
 $ cdk --version
 1.15.0 (build bdbe3aa)
+```
+
+#### vscode のための設定
+
+https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc
+
+OS のデフォルトの設定では数値が低いため vscode が多くのファイルの状態を監視しきれないので必要であれば数値上げる、もしくは node_modules を除外などをする
+
+sysctl に設定
+
+```
+echo 'fs.inotify.max_user_watches=524288' | sudo tee -a  /etc/sysctl.conf
+```
+
+sysctl に適応
+
+```
+sudo sysctl -p
 ```
