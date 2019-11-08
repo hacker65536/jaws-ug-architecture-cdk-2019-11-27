@@ -40,7 +40,7 @@ echo "export PROMPT_COMMAND='history -a'" >> ~/.bashrc
 echo 'HISTSIZE=100000' >> ~/.bashrc
 ```
 
-yum の update と reboot
+yum の update と system の reboot
 
 ```
 sudo yum update -y
@@ -49,17 +49,30 @@ sudo reboot
 
 #### aws cli 環境を整える
 
+python3 の pip を install
+
 ```
 sudo yum install python3-pip
 ```
+
+pip から awscli を install
 
 ```
 pip3 install --user awscli
 ```
 
+環境変数に設定
+
 ```
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
+```
+
+awscli のバージョン確認
+
+```console
+$ aws --version
+aws-cli/1.16.277 Python/3.7.4 Linux/4.14.146-120.181.amzn2.x86_64 botocore/1.13.13
 ```
 
 <details><summary>credencialsの設定</summary>
@@ -86,13 +99,16 @@ aws configure set aws_secret_access_key $awssec
 aws configure set cli_follow_urlparam false
 ```
 
-profile で assumerole する場合
-適宜に profile と sessionname を変更
+profile で assumerole する場合は適宜に profile と sessionname を変更
+
+変数化
 
 ```
 myprofile=myprofile
 myses=mysessionname
 ```
+
+設定
 
 ```
 aws configure --profile $myprof set role_arn <roleARN>
@@ -142,4 +158,17 @@ default を最新版にする
 
 ```
 nvm alias default node
+```
+
+#### cdk 環境を整える
+
+```
+npm i -g aws-cdk
+```
+
+cdk のバージョンを確認
+
+```console
+$ cdk --version
+1.15.0 (build bdbe3aa)
 ```
