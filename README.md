@@ -92,7 +92,7 @@ sudo reboot
 python3 の pip を install
 
 ```
-sudo yum install python3-pip
+sudo yum install -y python3-pip
 ```
 
 pip から awscli を install
