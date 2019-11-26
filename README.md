@@ -30,7 +30,7 @@ local に install するもの
 - Vim
 
 remote(実環境)に install するもの
-
+- AWS Toolkit for Visual Studio Code
 - Prettier - Code formatter
 - Git Blame
 - Git Graph
