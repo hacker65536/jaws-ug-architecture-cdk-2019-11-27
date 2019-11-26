@@ -21,22 +21,22 @@ IDE はほぼ [vscode](https://code.visualstudio.com/) 一択なので download 
 
 #### vscode の設定
 
-extensions
+**extensions**
 
 local に install するもの
 
-- Remote Development(ssh,ssh:editting configruration files)
-- vscode-icons
-- Vim
+- Remote Development(リモート環境)
+- vscode-icons(アイコンがあると見やすい)
+- Vim(vim使う人用)
 
 remote(実環境)に install するもの
 - AWS Toolkit for Visual Studio Code
-- Prettier - Code formatter
-- Git Blame
-- Git Graph
-- Git History
-- GitLens
-- TSLint
+- Prettier - Code formatter(フォーマッター)
+- Git Blame(git情報を見やすくする)
+- Git Graph(git情報を見やすくする)
+- Git History(git情報を見やすくする)
+- GitLens(git情報を見やすくする)
+- TSLint(typescript lint)
 
 <details><summary>vscode監視ファイルの一部を除外する設定</summary>
 https://code.visualstudio.com/docs/getstarted/settings
