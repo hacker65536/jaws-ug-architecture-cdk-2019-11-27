@@ -1,5 +1,6 @@
 # cdk 開発環境(参考)
 
+![](./cdkenvironment-example.png)
 - クライアント PC (windows10, macOS, その他)
 - 実環境 (EC2)
 
