@@ -262,3 +262,23 @@ Host cdkec2
 
 
 
+### workshop開始の準備
+
+terminalなどで作業ディレクトリを作成
+
+```
+mkdir cdkworks
+cd !$
+```
+
+作業ディレクトリの初期化
+```
+mkdir <ANYSTACKNAME>
+cd !$
+cdk init -l typescript
+```
+
+
+vscodeのExplorerから　`Add Folder to Workspace`で作成したディレクトリを登録
+
+
