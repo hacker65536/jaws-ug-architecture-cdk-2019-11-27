@@ -220,6 +220,11 @@ dotnet(利用する場合)
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 sudo yum install -y dotnet-sdk-3.0
 ```
+java(利用する場合)
+
+```
+sudo yum install -y java maven
+```
 
 #### vscode のための設定
 
