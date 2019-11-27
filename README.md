@@ -249,7 +249,7 @@ sudo sysctl -p
 sudo yum install -y git jq
 ```
 ```
-sudo amazon-linux-extras install -y vim docker 
+sudo amazon-linux-extras install -y vim docker ...
 ```
 
 
