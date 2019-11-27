@@ -249,7 +249,7 @@ sudo amazon-linux-extras install -y vim docker
 
 ### vsocdeから接続
 
-左のメニューから `Remote Explorer`のアイコンをクリックし、`SSH TARGETS` ペインの歯車マークのconfigureをクリックし、 `.ssh/config` などのファイルに実環境のec2へのアクセス情報を記述
+左のメニューから `Remote Explorer`のアイコンをクリックし、`SSH TARGETS` ペインの歯車マークのconfigureをクリック。　Command Paletteの候補 `.ssh/config` などのファイルに実環境のec2へのアクセス情報を記述
 
 ```
 Host cdkec2
