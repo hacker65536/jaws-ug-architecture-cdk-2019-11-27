@@ -264,6 +264,7 @@ Host cdkec2
 
 ### workshop開始の準備
 
+
 terminalなどで作業ディレクトリを作成
 
 ```
@@ -271,7 +272,9 @@ mkdir cdkworks
 cd !$
 ```
 
-作業ディレクトリの初期化
+
+
+作業ディレクトリの作成とcdkによる初期化(workshopと違う場合はworkshopに合わせる)
 ```
 mkdir <ANYSTACKNAME>
 cd !$
