@@ -188,17 +188,17 @@ curl -SsL -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | 
 source ~/.bashrc
 ```
 
-node の lts と最新版を install
+node の lts と~~最新版(v13.2.0)~~ v13.1.0を install
 
 ```
 nvm install --lts
-nvm install node
+nvm install v13.1.0
 ```
 
-default を最新版にする
+default を~~最新版~~ v13.1.0にする
 
 ```
-nvm alias default node
+nvm alias default v13.1.0
 ```
 
 #### cdk 環境を整える
