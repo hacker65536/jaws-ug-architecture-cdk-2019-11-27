@@ -220,6 +220,9 @@ https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-
 
 OS のデフォルトの設定では数値が低いため vscode が多くのファイルの状態を監視しきれないので必要であれば数値上げる、もしくは node_modules を除外などをする
 
+
+
+
 sysctl に設定
 
 ```
@@ -231,3 +234,29 @@ sysctl に適応
 ```
 sudo sysctl -p
 ```
+
+#### よく使うパッケージ
+
+
+```
+sudo yum install -y git jq
+```
+```
+sudo amazon-linux-extras install -y vim docker 
+```
+
+
+
+### vsocdeから接続
+
+左のメニューから `Remote Explorer`のアイコンをクリックし、SSH Targets　歯車マークのconfigureをクリックし、 `.ssh/config` に実環境のec2へのアクセス情報を記述
+
+```
+Host cdkec2
+    HostName xxx.xxx.xxx.xxx
+    User ec2-user
+    IdentityFile ~/.ssh/my_private.key
+```    
+
+設定したら ssh targets からホストをnew windowsでopen
+
