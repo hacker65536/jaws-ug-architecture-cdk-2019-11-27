@@ -215,7 +215,7 @@ $ cdk --version
 ```
 
 
-dotnetを利用する場合は下記の準備
+dotnet(利用する場合)
 ```
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 sudo yum install -y dotnet-sdk-3.0
