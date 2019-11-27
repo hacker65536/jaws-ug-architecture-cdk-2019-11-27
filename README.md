@@ -214,6 +214,13 @@ $ cdk --version
 1.15.0 (build bdbe3aa)
 ```
 
+
+dotnetを利用する場合は下記の準備
+```
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
+sudo yum install -y dotnet-sdk-3.0
+```
+
 #### vscode のための設定
 
 https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc
