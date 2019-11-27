@@ -220,6 +220,17 @@ dotnet(利用する場合)
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 sudo yum install -y dotnet-sdk-3.0
 ```
+
+
+```
+Error downloading packages:
+  netstandard-targeting-pack-2.1-2.1.0-1.x86_64: [Errno 256] No more mirrors to try.
+```
+のエラーが出た場合は直接install してから dotnet-sdkを再度installする
+
+```
+sudo yum install -y https://packages.microsoft.com/centos/7/prod/netstandard-targeting-pack-2.1.0-x64.rpm
+```
 java(利用する場合)
 
 ```
